@@ -8,8 +8,8 @@ vector<string> split_string(string);
 int cost(vector<int> B) {
     int a,b,max_a=0,max_b=0,max_a_temp,max_b_temp;
     for(int i=1;i<B.size();i++){
-        a=abs(B[i]-1);
-        b=abs(1-B[i-1]);
+        a=abs(B[i]-1);//assuming 1st element as 1
+        b=abs(1-B[i-1]);//assuming 2nd element as 1
         max_a_temp=max(max_a,max_b+b);
         max_b_temp=max(max_b,max_a+a);
         max_a=max_a_temp;
